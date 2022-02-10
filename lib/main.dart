@@ -24,23 +24,23 @@ class HomePage extends StatefulWidget{
 
   }
   class _HomePageState extends State<HomePage> {
-    int? firnum;
-    int? secondnum;
-    String? texttodisplay = "";
-    String? res;
-    String? operationtoperform;
+    int firnum;
+    int secondnum;
+    String texttodisplay = "";
+    String res;
+    String operationtoperform;
 
     void btnclicked(String btntext) {
-      if (firnum != null && secondnum != null && texttodisplay != null && res != res && operationtoperform != null) {
         if (btntext == "C") {
           texttodisplay = "";
           firnum = 0;
           secondnum = 0;
           res = "";
-        } else if (btntext == "+" || btntext == "-" || btntext == "x" || btntext == "/") {
-          firnum = int.parse(texttodisplay);
-          res = "";
-          operationtoperform = btntext;
+        }
+        else if (btntext == "+" || btntext == "-" || btntext == "x" || btntext == "/") {
+            firnum = int.parse(texttodisplay);
+            res = "";
+            operationtoperform = btntext;
         }
         else if (btntext == "=") {
           secondnum = int.parse(texttodisplay);
